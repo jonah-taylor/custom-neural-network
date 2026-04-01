@@ -17,10 +17,10 @@ public:
     MatrixXd dz, avg_grad_w, avg_grad_b;
     MatrixXd m_w, v_w, m_b, v_b;
 
-    double beta1 = 0.9;       // Exponential decay rate for first moment
+    double beta1 = 0.85;       // Exponential decay rate for first moment
     double beta2 = 0.999;     // Exponential decay rate for second moment
     double epsilon = 1e-8;   // Small constant to avoid division by zero
-    double lambda = 0.0;     // Weight decay coefficient (Set to 1% of learning rate)
+    double lambda = 0.001;     // Weight decay coefficient (Set to 1%)
 
     string a_func_name = "leakyrelu";
     function<MatrixXd(const MatrixXd&)> a_func;

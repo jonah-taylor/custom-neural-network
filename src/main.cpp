@@ -32,16 +32,17 @@ bool display = true;
 bool printEpochs = true;
 
 NeuralNetwork nn({
-    MakeLayer({6}, "dense", "sigmoid"), 
-    MakeLayer({8}, "dense", "sigmoid"),
-    MakeLayer({1}, "dense", "sigmoid")
+    MakeLayer({6}, "dense", "leakyrelu"), 
+    MakeLayer({30}, "dense", "leakyrelu"),
+    MakeLayer({10}, "dense", "leakyrelu"),
+    MakeLayer({1}, "dense", "leakyrelu")
 });
 std::vector<double> inputs;
 std::vector<std::vector<double>> X;
 std::vector<std::vector<double>> Y;
-size_t epochs = 2;
+size_t epochs = 1;
 size_t batchSize = 1;
-double trainingSpeed = 0.01;
+double trainingSpeed = 0.0001;
 
 void keyBoardInputs();
 
@@ -241,7 +242,7 @@ int main(int argc, char* argv[]) {
                         else
                             Y.push_back({0});
                     }
-                    nn.train(X, Y, epochs, batchSize, trainingSpeed, "sgd", printEpochs);
+                    nn.train(X, Y, epochs, batchSize, trainingSpeed, "adamw", printEpochs);
                     X.clear();
                     Y.clear();
                 }
