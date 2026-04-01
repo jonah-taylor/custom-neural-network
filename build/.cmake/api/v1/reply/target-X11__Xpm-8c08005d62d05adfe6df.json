@@ -1,0 +1,84 @@
+{
+	"abstract" : true,
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"find_package",
+			"sfml_find_package",
+			"set_target_properties"
+		],
+		"files" : 
+		[
+			"/usr/share/cmake/Modules/FindX11.cmake",
+			"libs/SFML/cmake/Macros.cmake",
+			"libs/SFML/src/SFML/Window/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 294,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 383,
+				"parent" : 1
+			},
+			{
+				"file" : 0,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1186,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 1187,
+				"parent" : 3
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "X11::Xpm::@b3059e65f89605c2b3d3",
+	"imported" : true,
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "X11::X11::@b3059e65f89605c2b3d3"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "X11::X11::@b3059e65f89605c2b3d3"
+		}
+	],
+	"local" : true,
+	"name" : "X11::Xpm",
+	"paths" : 
+	{
+		"build" : "libs/SFML/src/SFML/Window",
+		"source" : "libs/SFML/src/SFML/Window"
+	},
+	"sources" : [],
+	"type" : "UNKNOWN_LIBRARY"
+}
